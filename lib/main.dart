@@ -11,12 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: TopicsScreen(),
+      home: SplashScreen(),
       theme: ThemeData(
+        scaffoldBackgroundColor: Color(appPrimaryColor),
         fontFamily: 'Risque',
         primaryColor: Color(appPrimaryColor),
         colorScheme: ColorScheme.fromSeed(seedColor: Color(appPrimaryColor)),
-        scaffoldBackgroundColor: Color(appPrimaryColor)
+        scaffoldBackgroundColor: Color(appPrimaryColor),
       ),
     );
   }

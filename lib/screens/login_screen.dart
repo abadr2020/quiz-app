@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/screens/topics_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: theme.primaryColor,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back),
+        ),
+      ),
       body: Center(
         child: Container(
           padding: EdgeInsets.all(32),
@@ -55,7 +65,14 @@ class LoginScreen extends StatelessWidget {
                 width: double.infinity,
                 height: 48,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute<void>(
+                        builder: (BuildContext context) => const TopicsScreen(),
+                      ),
+                    );
+                  },
                   child: Text('Start Quiz'),
 
                   style: ElevatedButton.styleFrom(

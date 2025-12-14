@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/screens/login_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   @override
@@ -24,6 +25,19 @@ class SplashScreen extends StatelessWidget {
             Text(
               'Test your knowledge and have fun!',
               style: TextStyle(fontSize: 18, color: Color(0xffffffff)),
+            ),
+
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => LoginScreen(),
+                  ),
+                );
+                // Navigator.pop(context);
+              },
+              child: Text('Start', style: TextStyle(color: Colors.white)),
             ),
           ],
         ),
