@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/screens/login_screen.dart';
 import 'package:quiz_app/screens/splash_screen.dart';
+import 'package:quiz_app/screens/topics_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,11 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginScreen(),
+      home: TopicsScreen(),
       theme: ThemeData(
         fontFamily: 'Risque',
         primaryColor: Color(appPrimaryColor),
         colorScheme: ColorScheme.fromSeed(seedColor: Color(appPrimaryColor)),
+        scaffoldBackgroundColor: Color(appPrimaryColor)
       ),
     );
   }

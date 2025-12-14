@@ -5,8 +5,6 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: theme.primaryColor,
-
       body: Center(
         child: Container(
           padding: EdgeInsets.all(32),
