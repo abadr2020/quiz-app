@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Risque',
         primaryColor: Color(appPrimaryColor),
         colorScheme: ColorScheme.fromSeed(seedColor: Color(appPrimaryColor)),
-        scaffoldBackgroundColor: Color(appPrimaryColor),
       ),
     );
   }
